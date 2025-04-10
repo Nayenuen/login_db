@@ -1,0 +1,133 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ea6680 0%, #de8cae 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+form:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Elementos del formulario */
+.form-element {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-element label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.form-element input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-element input:focus {
+    border-color: #e795bc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(168, 40, 79, 0.2);
+}
+
+.form-element:hover label {
+    color: #ef4c61;
+}
+
+/* Botón */
+button {
+    background: linear-gradient(to right, #ea66b7, #cc6d8c);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ca426f, #e183b7);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Mensajes de error y éxito */
+.error {
+    color: #e74c3c;
+    background-color: #fadbd8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #e74c3c;
+    animation: shake 0.5s;
+}
+
+.success {
+    color: #27ae60;
+    background-color: #d5f5e3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #27ae60;
+    animation: fadeIn 0.5s;
+}
+
+/* Animaciones */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efecto para los inputs cuando tienen contenido válido */
+.form-element input:valid {
+    border-color: #70c07c;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    form {
+        width: 85%;
+        padding: 1.5rem;
+    }
+}
